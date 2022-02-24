@@ -26,4 +26,10 @@ menu = """
 print(menu)
 
 selected_option = input("What do you want to do (1-5)?: " )
-print (selected_option)
+
+if selected_option == "2":
+      name = input("What is the contact's name?: ")
+      phone_number = input("what is the contact's phone number?:  ")
+      phonebook[name] = phone_number
+      print("Contact added successfully!")
+
