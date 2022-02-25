@@ -12,6 +12,12 @@ in the dictionary and print each out to the terminal.
 5. If they choose to quit, end the program.
 """
 
+from ast import Delete
+from os import remove
+from turtle import update
+from unittest import result
+
+
 userQuit = False
 menu = """
       PHONE  BOOK
@@ -32,7 +38,8 @@ while not(userQuit):
       if selected_option == "2":
             name = input("What is the contact's name?: ")
             phone_number = input("what is the contact's phone number?:  ")
-            phonebook[name] = phone_number
+            if phone_number not in phonebook.items():
+                  phonebook.update({name:phone_number})
             print("Contact added successfully!")
       elif selected_option == "1":
             name = input("What contact information would you like to see?: ")
@@ -42,3 +49,18 @@ while not(userQuit):
                   print ("This is their phone number: "+ phonebook[name])
       elif selected_option == "5":
             userQuit = True
+      elif selected_option == "3":
+            input("what is the name of the contact you wish to delete?: " )
+            if input == (name):
+                  del(name)
+            print("Contact has been deleted")
+      elif selected_option == 4:
+             if bool(phonebook):
+                         print("You have no contacts remaining")
+             else :
+                   print({phonebook})
+            #print(phonebook())
+          #  if phonebook == 0:
+           #       print("Phonebook is currently empty")
+            #elif phonebook >= 1:
+              #    print(phonebook.items)
