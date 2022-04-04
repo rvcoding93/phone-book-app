@@ -1,4 +1,3 @@
-
 """
 OBJECTIVES
 1. If they choose to look up an entry, you will ask them for the person's name, 
@@ -49,18 +48,27 @@ while not(userQuit):
                   print ("This is their phone number: "+ phonebook[name])
       elif selected_option == "5":
             userQuit = True
+            #PREVIOUS OPTION 3 CODE#
+      # elif selected_option == "3":
+      #       input("what is the name of the contact you wish to delete?: " )
+      #       if input == name:
+      #             del(name)
+      #CURRENT OPTION3 CODE#
       elif selected_option == "3":
             input("what is the name of the contact you wish to delete?: " )
-            if input == (name):
-                  del(name)
+            for x in phonebook.keys():
+                  print("Name: ",x, "\tNumber: ", phonebook[x])
+            print("\nThese are all your saved contacts.\n")
             print("Contact has been deleted")
-      elif selected_option == 4:
+      elif selected_option == "4":
              if bool(phonebook):
                          print("You have no contacts remaining")
              else :
                    print({phonebook})
+            #PREVIOUS CODE FOR #5 BELOW#
             #print(phonebook())
           #  if phonebook == 0:
            #       print("Phonebook is currently empty")
             #elif phonebook >= 1:
               #    print(phonebook.items)
+
